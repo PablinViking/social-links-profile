@@ -1,0 +1,134 @@
+@use 'variables' as v;
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: v.$principal-font;
+}
+
+body{
+    font-size: 0.875em;
+    background-color: v.$grey-900;
+
+    main{
+        background-color: v.$grey-800;
+        width: 327px;
+        height: 579px;
+        margin: 116px auto 50px;
+        padding: 24px;
+        border-radius: 10px;
+
+        @media screen and (min-width:768px) {
+            width: 384px;
+            height: 612px;
+            padding: 40px;
+            margin: 130px auto 60px;
+        }
+
+        @media screen and (min-width:1024px){
+            margin: 150px auto 70px;
+        }
+
+        @media screen and (min-width:1440px){
+            margin: 174px auto 80px;
+        }
+
+        .user-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+
+            &__avatar{
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                margin-bottom: 28px;
+
+            }
+
+            &__name{
+                color: v.$white;
+                font-weight: 600;
+                font-size: 1.571em;
+                margin-bottom: 8px;
+
+                @media screen and (min-width:768px){
+                    margin-bottom: 10px;
+                }
+            }
+
+            &__location{
+                color: v.$green;
+                font-size: 0.9em;
+                margin-bottom: 28px;
+            }
+
+            &__about{
+                color: v.$white;
+            }
+        }
+
+        .social-net{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__button{
+                width: 279px;
+                height: 46px;
+                text-align: center;
+                background-color: v.$grey-700;
+                margin-bottom: 16px;
+                border-radius: 8px;
+                color: v.$white;
+                text-decoration: none;
+                font-weight: 700;
+                padding-top: 14px;
+
+                @media screen and (min-width:768px){
+                    width: 304px;
+                }
+
+
+                &:hover{
+                    background-color: v.$green;
+                    color: v.$grey-800;
+                    transition: 250ms;
+                }
+
+                &:active{
+                    background-color: v.$white;
+                    color: v.$green;
+                    transition: 100ms;
+                }
+            }
+        }
+    }
+
+    .attribution{
+        text-align: center;
+        font-size: 0.9em;
+        margin-bottom: 20px;
+
+        &__p{
+            color: v.$white;
+        }
+
+        &__a{
+            color: v.$green;
+
+            &:hover{
+                color: v.$blue;
+                transition: 250ms;
+            }
+
+            &:active{
+                color: v.$ligth-blue;
+                transition: 100ms;
+            }
+        }
+    }
+}
